@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.modal-launcher {
+  padding: .5em 1.25em;
+  background-color: #0092ff;
+  color: white;
+  font-size: .9em;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+}
+
+.modal__inner {
+  max-width: 500px;
+  margin: 5em auto 0;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.modal__title {
+  font-size: 1.5em;
+}
+
+.modal__close-icon {
+  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.modal__body {
+  padding: 1.5em 1em;
+}
+
+.modal__body p {
+  margin: 0;
+  font-size: .9em;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.modal__footer {
+  padding: 1em;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+.modal__cancel {
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: bold;
+}
+
+.modal__confirm {
+  margin-left: .5em;
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  background-color: #0092ff;
+  color: white;
+  font-weight: bold;
+}
+
+@-webkit-keyframes modalSlide {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes modalSlide {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.is-active {
+  visibility: visible;
+}
+
+.is-active .modal__inner {
+  -webkit-animation-name: modalSlide;
+          animation-name: modalSlide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+/*# sourceMappingURL=main.css.map */

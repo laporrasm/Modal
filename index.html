@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modal Component</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/fc7973c23c.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<button class="modal-launcher">Launch Modal</button>
+			<div class="modal">
+				<div class="modal__inner">
+					<div class="modal__header">
+						<div class="modal__title">Modal Title</div>
+						<div class="modal__close-icon"><i class="fas fa-times"></i></div>
+					</div>
+					<div class="modal__body">
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsam fuga vero esse eveniet voluptas quaerat culpa excepturi fugit aperiam?</p>
+					</div>
+					<div class="modal__footer">
+						<button class="modal__cancel">Cancel</button>
+						<button class="modal__confirm">Save Changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./scripts/main.js"></script>
+	</body>
+</html>
